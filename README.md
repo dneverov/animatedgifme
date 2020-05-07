@@ -1,16 +1,14 @@
-# Animatedgifme
+# Animatedgifme-v1
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/animatedgifme`. To experiment with that code, run `bin/console` for an interactive prompt.
+A ruby library for http://animatedgif.me. Created for the _**current**_ Animatedgif JSON.
 
-TODO: Delete this and the text above, and describe your gem
+A gem example from the tutorial: [Consuming an API Using HTTParty and Creating a Gem](https://gorails.com/episodes/23) @ GoRails by Chris Oliver.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-```ruby
-gem 'animatedgifme'
-```
+    gem 'animatedgifme-v1'
 
 And then execute:
 
@@ -18,21 +16,29 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install animatedgifme
+    $ gem install animatedgifme-v1
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+Animatedgifme.find(1700)
+#=> "http://animatedgif.me/uploads/f5005a560b8454791e809348c5927653.gif"
 
-## Development
+Animatedgifme.tagged("cat")
+#=> "http://animatedgif.me/uploads/c74bcc6e60f81bb31652cbdbdd732261.gif"
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Animatedgifme.random "cat"
+#=> "http://animatedgif.me/uploads/8666ff05ceebf8ad03eefdc2e2d0560d.gif"
+```
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+## Testing
+
+    $ bundle exec rake
+
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/animatedgifme.
+Bug reports and pull requests are welcome on GitHub at https://github.com/dneverov/animatedgifme.
 
 ## License
 
