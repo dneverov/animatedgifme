@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    animatedgifme-v1 (1.0.0)
+    animatedgifme-v1 (1.0.1)
       httparty (~> 0.18.0)
 
 GEM
