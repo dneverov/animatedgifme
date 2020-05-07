@@ -4,14 +4,14 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "animatedgifme/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "animatedgifme"
+  spec.name          = "animatedgifme-v1"
   spec.version       = Animatedgifme::VERSION
   spec.authors       = ["Denis Neverov"]
   spec.email         = ["denis.neverov@gmail.com"]
 
-  spec.summary       = %q{A gem example from GoRails.}
-  spec.description   = %q{A gem example from GoRails. I don't need to publish it, but Bundler forced me to add a description.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{A ruby library for https://animatedgif.me}
+  spec.description   = %q{A v1 of ruby library for https://animatedgif.me. A gem example from GoRails by Chris Oliver. Created for the current Animatedgif JSON.}
+  spec.homepage      = "https://github.com/dneverov/animatedgifme"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -37,8 +37,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 2.0"
-  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rake", "~> 12.3", ">= 12.3.3"
   spec.add_development_dependency "rspec", "~> 3.0"
 
-  spec.add_dependency "httparty", "0.18.0"
+  spec.add_dependency "httparty", "~> 0.18.0"
 end

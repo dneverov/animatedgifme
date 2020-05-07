@@ -23,18 +23,14 @@ module Animatedgifme
 
     def self.retrieve_url(page_data)
       responses = JSON.parse(page_data.parsed_response, symbolize_names: true)[:image_data]
-      response_uri JSON[responses]["id"]
+      response_uri JSON[responses]["id"] if responses
     end
 
     def self.response_uri(gif_id)
-      "https://animatedgif.me/uploads/#{gif_id}" if gif_id
+      [self.base_uri, 'uploads', gif_id].join('/') if gif_id
     end
 
     def self.get_retrieve_url(query)
       retrieve_url get(query, format: :plain)
     end
 end
-
-Animatedgifme.find(768)
-# Animatedgifme.tagged("cat")
-# Animatedgifme.random("cat")
